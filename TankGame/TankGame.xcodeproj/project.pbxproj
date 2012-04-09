@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CC09AE315334A3D00487E2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC09AE215334A3D00487E2A /* UIKit.framework */; };
+		4CC09AE515334A3D00487E2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC09AE415334A3D00487E2A /* Foundation.framework */; };
+		4CC09AE715334A3D00487E2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC09AE615334A3D00487E2A /* CoreGraphics.framework */; };
+		4CC09AED15334A3D00487E2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CC09AEB15334A3D00487E2A /* InfoPlist.strings */; };
+		4CC09AEF15334A3D00487E2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC09AEE15334A3D00487E2A /* main.m */; };
+		4CC09AF315334A3D00487E2A /* _94AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC09AF215334A3D00487E2A /* _94AppDelegate.m */; };
+		4CC09AF615334A3D00487E2A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */; };
+		4CC09AF915334A3D00487E2A /* _94ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC09AF815334A3D00487E2A /* _94ViewController.m */; };
+		4CC09B041533551B00487E2A /* Tank.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC09B031533551B00487E2A /* Tank.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4CC09ADE15334A3D00487E2A /* TankGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC09AE215334A3D00487E2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4CC09AE415334A3D00487E2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4CC09AE615334A3D00487E2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4CC09AEA15334A3D00487E2A /* TankGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TankGame-Info.plist"; sourceTree = "<group>"; };
+		4CC09AEC15334A3D00487E2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CC09AEE15334A3D00487E2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CC09AF015334A3D00487E2A /* TankGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TankGame-Prefix.pch"; sourceTree = "<group>"; };
+		4CC09AF115334A3D00487E2A /* _94AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _94AppDelegate.h; sourceTree = "<group>"; };
+		4CC09AF215334A3D00487E2A /* _94AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _94AppDelegate.m; sourceTree = "<group>"; };
+		4CC09AF515334A3D00487E2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		4CC09AF715334A3D00487E2A /* _94ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _94ViewController.h; sourceTree = "<group>"; };
+		4CC09AF815334A3D00487E2A /* _94ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _94ViewController.m; sourceTree = "<group>"; };
+		4CC09B021533551B00487E2A /* Tank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tank.h; sourceTree = "<group>"; };
+		4CC09B031533551B00487E2A /* Tank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tank.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CC09ADB15334A3D00487E2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC09AE315334A3D00487E2A /* UIKit.framework in Frameworks */,
+				4CC09AE515334A3D00487E2A /* Foundation.framework in Frameworks */,
+				4CC09AE715334A3D00487E2A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CC09AD315334A3C00487E2A = {
+			isa = PBXGroup;
+			children = (
+				4CC09B021533551B00487E2A /* Tank.h */,
+				4CC09B031533551B00487E2A /* Tank.m */,
+				4CC09AE815334A3D00487E2A /* TankGame */,
+				4CC09AE115334A3D00487E2A /* Frameworks */,
+				4CC09ADF15334A3D00487E2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CC09ADF15334A3D00487E2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CC09ADE15334A3D00487E2A /* TankGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CC09AE115334A3D00487E2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CC09AE215334A3D00487E2A /* UIKit.framework */,
+				4CC09AE415334A3D00487E2A /* Foundation.framework */,
+				4CC09AE615334A3D00487E2A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CC09AE815334A3D00487E2A /* TankGame */ = {
+			isa = PBXGroup;
+			children = (
+				4CC09AF115334A3D00487E2A /* _94AppDelegate.h */,
+				4CC09AF215334A3D00487E2A /* _94AppDelegate.m */,
+				4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */,
+				4CC09AF715334A3D00487E2A /* _94ViewController.h */,
+				4CC09AF815334A3D00487E2A /* _94ViewController.m */,
+				4CC09AE915334A3D00487E2A /* Supporting Files */,
+			);
+			path = TankGame;
+			sourceTree = "<group>";
+		};
+		4CC09AE915334A3D00487E2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CC09AEA15334A3D00487E2A /* TankGame-Info.plist */,
+				4CC09AEB15334A3D00487E2A /* InfoPlist.strings */,
+				4CC09AEE15334A3D00487E2A /* main.m */,
+				4CC09AF015334A3D00487E2A /* TankGame-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CC09ADD15334A3D00487E2A /* TankGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC09AFC15334A3D00487E2A /* Build configuration list for PBXNativeTarget "TankGame" */;
+			buildPhases = (
+				4CC09ADA15334A3D00487E2A /* Sources */,
+				4CC09ADB15334A3D00487E2A /* Frameworks */,
+				4CC09ADC15334A3D00487E2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TankGame;
+			productName = TankGame;
+			productReference = 4CC09ADE15334A3D00487E2A /* TankGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CC09AD515334A3C00487E2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 4CC09AD815334A3C00487E2A /* Build configuration list for PBXProject "TankGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4CC09AD315334A3C00487E2A;
+			productRefGroup = 4CC09ADF15334A3D00487E2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CC09ADD15334A3D00487E2A /* TankGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CC09ADC15334A3D00487E2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC09AED15334A3D00487E2A /* InfoPlist.strings in Resources */,
+				4CC09AF615334A3D00487E2A /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CC09ADA15334A3D00487E2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC09AEF15334A3D00487E2A /* main.m in Sources */,
+				4CC09AF315334A3D00487E2A /* _94AppDelegate.m in Sources */,
+				4CC09AF915334A3D00487E2A /* _94ViewController.m in Sources */,
+				4CC09B041533551B00487E2A /* Tank.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4CC09AEB15334A3D00487E2A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC09AEC15334A3D00487E2A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC09AF515334A3D00487E2A /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CC09AFA15334A3D00487E2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4CC09AFB15334A3D00487E2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CC09AFD15334A3D00487E2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TankGame/TankGame-Prefix.pch";
+				INFOPLIST_FILE = "TankGame/TankGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4CC09AFE15334A3D00487E2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TankGame/TankGame-Prefix.pch";
+				INFOPLIST_FILE = "TankGame/TankGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CC09AD815334A3C00487E2A /* Build configuration list for PBXProject "TankGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC09AFA15334A3D00487E2A /* Debug */,
+				4CC09AFB15334A3D00487E2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CC09AFC15334A3D00487E2A /* Build configuration list for PBXNativeTarget "TankGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC09AFD15334A3D00487E2A /* Debug */,
+				4CC09AFE15334A3D00487E2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CC09AD515334A3C00487E2A /* Project object */;
+}
