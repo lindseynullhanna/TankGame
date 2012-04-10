@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Game.h"
 
 @interface _94ViewController : UIViewController
+- (IBAction)Single:(id)sender;
+- (IBAction)Double:(id)sender;
+@property(weak, nonatomic) IBOutlet Game *game;
+
 
 @end

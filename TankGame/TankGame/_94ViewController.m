@@ -9,6 +9,7 @@
 #import "_94ViewController.h"
 
 @implementation _94ViewController
+@synthesize game;
 
 - (void)didReceiveMemoryWarning
 {
@@ -57,4 +58,11 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)Single:(id)sender {
+    self.game = [game initSinglePlayerGame];
+}
+
+- (IBAction)Double:(id)sender {
+    self.game = [game initTwoPlayerGame];
+}
 @end

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C970CA31534CDD800B4D4B2 /* Tank.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CA21534CDD800B4D4B2 /* Tank.m */; };
+		4C970CAE1534D97C00B4D4B2 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CAD1534D97C00B4D4B2 /* Game.m */; };
+		4C970CB11534DC2D00B4D4B2 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CB01534DC2D00B4D4B2 /* Player.m */; };
+		4C970CB71534EBD000B4D4B2 /* Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CB61534EBD000B4D4B2 /* Target.m */; };
+		4C970CBA1534EF1000B4D4B2 /* TargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CB91534EF1000B4D4B2 /* TargetView.m */; };
 		4CC09AE315334A3D00487E2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC09AE215334A3D00487E2A /* UIKit.framework */; };
 		4CC09AE515334A3D00487E2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC09AE415334A3D00487E2A /* Foundation.framework */; };
 		4CC09AE715334A3D00487E2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC09AE615334A3D00487E2A /* CoreGraphics.framework */; };
@@ -15,10 +20,19 @@
 		4CC09AF315334A3D00487E2A /* _94AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC09AF215334A3D00487E2A /* _94AppDelegate.m */; };
 		4CC09AF615334A3D00487E2A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */; };
 		4CC09AF915334A3D00487E2A /* _94ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC09AF815334A3D00487E2A /* _94ViewController.m */; };
-		4CC09B041533551B00487E2A /* Tank.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC09B031533551B00487E2A /* Tank.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C970CA11534CDD800B4D4B2 /* Tank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tank.h; sourceTree = "<group>"; };
+		4C970CA21534CDD800B4D4B2 /* Tank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tank.m; sourceTree = "<group>"; };
+		4C970CAC1534D97C00B4D4B2 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		4C970CAD1534D97C00B4D4B2 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		4C970CAF1534DC2D00B4D4B2 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		4C970CB01534DC2D00B4D4B2 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		4C970CB51534EBD000B4D4B2 /* Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target.h; sourceTree = "<group>"; };
+		4C970CB61534EBD000B4D4B2 /* Target.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target.m; sourceTree = "<group>"; };
+		4C970CB81534EF1000B4D4B2 /* TargetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetView.h; sourceTree = "<group>"; };
+		4C970CB91534EF1000B4D4B2 /* TargetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetView.m; sourceTree = "<group>"; };
 		4CC09ADE15334A3D00487E2A /* TankGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC09AE215334A3D00487E2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4CC09AE415334A3D00487E2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,8 +46,6 @@
 		4CC09AF515334A3D00487E2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4CC09AF715334A3D00487E2A /* _94ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _94ViewController.h; sourceTree = "<group>"; };
 		4CC09AF815334A3D00487E2A /* _94ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _94ViewController.m; sourceTree = "<group>"; };
-		4CC09B021533551B00487E2A /* Tank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tank.h; sourceTree = "<group>"; };
-		4CC09B031533551B00487E2A /* Tank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tank.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +65,6 @@
 		4CC09AD315334A3C00487E2A = {
 			isa = PBXGroup;
 			children = (
-				4CC09B021533551B00487E2A /* Tank.h */,
-				4CC09B031533551B00487E2A /* Tank.m */,
 				4CC09AE815334A3D00487E2A /* TankGame */,
 				4CC09AE115334A3D00487E2A /* Frameworks */,
 				4CC09ADF15334A3D00487E2A /* Products */,
@@ -85,9 +95,19 @@
 				4CC09AF115334A3D00487E2A /* _94AppDelegate.h */,
 				4CC09AF215334A3D00487E2A /* _94AppDelegate.m */,
 				4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */,
+				4C970CAC1534D97C00B4D4B2 /* Game.h */,
+				4C970CB81534EF1000B4D4B2 /* TargetView.h */,
+				4C970CB91534EF1000B4D4B2 /* TargetView.m */,
+				4C970CB51534EBD000B4D4B2 /* Target.h */,
+				4C970CB61534EBD000B4D4B2 /* Target.m */,
+				4C970CAF1534DC2D00B4D4B2 /* Player.h */,
+				4C970CB01534DC2D00B4D4B2 /* Player.m */,
+				4C970CAD1534D97C00B4D4B2 /* Game.m */,
 				4CC09AF715334A3D00487E2A /* _94ViewController.h */,
 				4CC09AF815334A3D00487E2A /* _94ViewController.m */,
 				4CC09AE915334A3D00487E2A /* Supporting Files */,
+				4C970CA11534CDD800B4D4B2 /* Tank.h */,
+				4C970CA21534CDD800B4D4B2 /* Tank.m */,
 			);
 			path = TankGame;
 			sourceTree = "<group>";
@@ -168,7 +188,11 @@
 				4CC09AEF15334A3D00487E2A /* main.m in Sources */,
 				4CC09AF315334A3D00487E2A /* _94AppDelegate.m in Sources */,
 				4CC09AF915334A3D00487E2A /* _94ViewController.m in Sources */,
-				4CC09B041533551B00487E2A /* Tank.m in Sources */,
+				4C970CA31534CDD800B4D4B2 /* Tank.m in Sources */,
+				4C970CAE1534D97C00B4D4B2 /* Game.m in Sources */,
+				4C970CB11534DC2D00B4D4B2 /* Player.m in Sources */,
+				4C970CB71534EBD000B4D4B2 /* Target.m in Sources */,
+				4C970CBA1534EF1000B4D4B2 /* TargetView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +304,7 @@
 				4CC09AFE15334A3D00487E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
