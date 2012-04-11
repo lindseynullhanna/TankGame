@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C18FDA81535FEF800E0F1DE /* SinglePlayer_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C18FDA61535FEF800E0F1DE /* SinglePlayer_UIViewController.m */; };
+		4C18FDA91535FEF800E0F1DE /* SinglePlayer_UIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C18FDA71535FEF800E0F1DE /* SinglePlayer_UIViewController.xib */; };
+		4C18FDAE1535FF1900E0F1DE /* TwoPlayer_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C18FDAC1535FF1800E0F1DE /* TwoPlayer_UIViewController.m */; };
+		4C18FDAF1535FF1900E0F1DE /* TwoPlayer_UIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C18FDAD1535FF1900E0F1DE /* TwoPlayer_UIViewController.xib */; };
 		4C970CA31534CDD800B4D4B2 /* Tank.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CA21534CDD800B4D4B2 /* Tank.m */; };
 		4C970CAE1534D97C00B4D4B2 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CAD1534D97C00B4D4B2 /* Game.m */; };
 		4C970CB11534DC2D00B4D4B2 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CB01534DC2D00B4D4B2 /* Player.m */; };
@@ -23,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C18FDA51535FEF800E0F1DE /* SinglePlayer_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePlayer_UIViewController.h; sourceTree = "<group>"; };
+		4C18FDA61535FEF800E0F1DE /* SinglePlayer_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePlayer_UIViewController.m; sourceTree = "<group>"; };
+		4C18FDA71535FEF800E0F1DE /* SinglePlayer_UIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SinglePlayer_UIViewController.xib; sourceTree = "<group>"; };
+		4C18FDAB1535FF1800E0F1DE /* TwoPlayer_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoPlayer_UIViewController.h; sourceTree = "<group>"; };
+		4C18FDAC1535FF1800E0F1DE /* TwoPlayer_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoPlayer_UIViewController.m; sourceTree = "<group>"; };
+		4C18FDAD1535FF1900E0F1DE /* TwoPlayer_UIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoPlayer_UIViewController.xib; sourceTree = "<group>"; };
 		4C970CA11534CDD800B4D4B2 /* Tank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tank.h; sourceTree = "<group>"; };
 		4C970CA21534CDD800B4D4B2 /* Tank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tank.m; sourceTree = "<group>"; };
 		4C970CAC1534D97C00B4D4B2 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
@@ -95,6 +105,12 @@
 				4CC09AF115334A3D00487E2A /* _94AppDelegate.h */,
 				4CC09AF215334A3D00487E2A /* _94AppDelegate.m */,
 				4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */,
+				4C18FDA51535FEF800E0F1DE /* SinglePlayer_UIViewController.h */,
+				4C18FDAB1535FF1800E0F1DE /* TwoPlayer_UIViewController.h */,
+				4C18FDAC1535FF1800E0F1DE /* TwoPlayer_UIViewController.m */,
+				4C18FDAD1535FF1900E0F1DE /* TwoPlayer_UIViewController.xib */,
+				4C18FDA61535FEF800E0F1DE /* SinglePlayer_UIViewController.m */,
+				4C18FDA71535FEF800E0F1DE /* SinglePlayer_UIViewController.xib */,
 				4C970CAC1534D97C00B4D4B2 /* Game.h */,
 				4C970CB81534EF1000B4D4B2 /* TargetView.h */,
 				4C970CB91534EF1000B4D4B2 /* TargetView.m */,
@@ -175,6 +191,8 @@
 			files = (
 				4CC09AED15334A3D00487E2A /* InfoPlist.strings in Resources */,
 				4CC09AF615334A3D00487E2A /* MainStoryboard.storyboard in Resources */,
+				4C18FDA91535FEF800E0F1DE /* SinglePlayer_UIViewController.xib in Resources */,
+				4C18FDAF1535FF1900E0F1DE /* TwoPlayer_UIViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +211,8 @@
 				4C970CB11534DC2D00B4D4B2 /* Player.m in Sources */,
 				4C970CB71534EBD000B4D4B2 /* Target.m in Sources */,
 				4C970CBA1534EF1000B4D4B2 /* TargetView.m in Sources */,
+				4C18FDA81535FEF800E0F1DE /* SinglePlayer_UIViewController.m in Sources */,
+				4C18FDAE1535FF1900E0F1DE /* TwoPlayer_UIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
