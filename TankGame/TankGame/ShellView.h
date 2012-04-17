@@ -12,5 +12,5 @@
 @interface ShellView : UIView
 
 
-@property(nonatomic, strong) Shell *myShell;
+//@property(nonatomic, strong) Shell *myShell;
 @end

@@ -9,5 +9,5 @@
 #import "Shell.h"
 
 @implementation Shell
-@synthesize myShellView;
+//@synthesize myShellView;
 @end

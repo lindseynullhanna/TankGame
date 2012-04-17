@@ -9,14 +9,18 @@
 #import "TankView.h"
 
 @implementation TankView
-@synthesize myTank;
 
+
+-(void) doLayout
+{
+    self.backgroundColor = [UIColor blueColor];
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self doLayout];
     }
     return self;
 }

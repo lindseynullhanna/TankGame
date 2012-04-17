@@ -9,7 +9,7 @@
 #import "ShellView.h"
 
 @implementation ShellView
-@synthesize myShell;
+//@synthesize myShell;
 
 
 - (id)initWithFrame:(CGRect)frame

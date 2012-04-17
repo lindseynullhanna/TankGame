@@ -59,7 +59,7 @@
 }
 
 - (IBAction)Single:(id)sender {
-    self.game = [game initSinglePlayerGame];
+    //self.game = [game initSinglePlayerGame];
 }
 
 - (IBAction)Double:(id)sender {

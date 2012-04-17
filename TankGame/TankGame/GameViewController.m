@@ -12,7 +12,7 @@
 @synthesize currentGame;
 @synthesize players;
 @synthesize currentTarget;
-
+@synthesize tank;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -36,8 +36,14 @@
 
 - (void)viewDidLoad
 {
+    
+    NSLog(@"VIEW DID LOAD!");
     [super viewDidLoad];
     currentGame = [[Game alloc] initTwoPlayerGame];
+    
+    CGRect frame = CGRectMake(0., 0., 10, 100);
+    TankView *tankView = [[TankView alloc] initWithFrame:frame];
+    [self.view addSubview:tankView];
     
     
     

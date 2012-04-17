@@ -11,8 +11,8 @@
 #import "Turret.h"
 
 @interface Tank : NSObject
-@property(nonatomic, weak) TankView *myTankView;
 @property(nonatomic, strong) Turret *myTurret;
+//@property(nonatomic, strong) TankView *myTankView;
 
 -(id) initNewTank;
 

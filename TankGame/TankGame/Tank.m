@@ -13,7 +13,7 @@
 
 @implementation Tank
 
-@synthesize myTankView;
+//@synthesize myTankView;
 @synthesize myTurret;
 
 -(id) initNewTank{

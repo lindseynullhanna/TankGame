@@ -11,6 +11,7 @@
 
 
 @interface TankView : UIView
-@property(nonatomic, strong) Tank *myTank;
+
+
 
 @end

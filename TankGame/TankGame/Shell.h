@@ -11,6 +11,6 @@
 
 
 @interface Shell : NSObject
-@property(nonatomic,weak) ShellView *myShellView;
+//@property(nonatomic,weak) ShellView *myShellView;
 
 @end

@@ -11,8 +11,9 @@
 
 @implementation Player
 
+@synthesize playerNum;
 @synthesize totalPoints;
-//@synthesize tank;
+@synthesize tank;
 
 -(Player*) initNewPlayer: (NSInteger) playerN{
     self = [super init];

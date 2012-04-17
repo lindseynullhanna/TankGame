@@ -11,7 +11,7 @@
 @implementation TargetView
 
 -(void) doLayout{
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor grayColor];
 }
 
 - (id)initWithFrame:(CGRect)frame

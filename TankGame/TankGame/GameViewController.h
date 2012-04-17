@@ -16,5 +16,7 @@
 @property(nonatomic, strong) NSMutableArray *players;
 @property(nonatomic, strong) Target *currentTarget;
 
+@property(nonatomic, strong) IBOutlet TankView *tank;
+
 
 @end
