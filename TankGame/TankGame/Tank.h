@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TankView.h"
+#import "Turret.h"
 
-@interface Tank : NSObject{
-    //Boolean myTurn;
-    //UIColor *myColor;
-    
-}
+@interface Tank : NSObject
+@property(nonatomic, weak) TankView *myTankView;
+@property(nonatomic, strong) Turret *myTurret;
 
+-(id) initNewTank;
 
 @end 

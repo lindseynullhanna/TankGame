@@ -10,8 +10,9 @@
 #import "Tank.h"
 
 @interface Player : NSObject
+@property NSInteger playerNum;
 @property NSInteger totalPoints;
-//@property Tank tank;
+@property(nonatomic, strong) Tank *tank;
 
--(Player*) initNewPlayer;
+-(Player*) initNewPlayer: (NSInteger) playerN;
 @end

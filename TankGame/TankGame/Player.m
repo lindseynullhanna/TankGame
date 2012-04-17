@@ -10,14 +10,17 @@
 
 
 @implementation Player
+
 @synthesize totalPoints;
 //@synthesize tank;
 
--(Player*) initNewPlayer{
+-(Player*) initNewPlayer: (NSInteger) playerN{
     self = [super init];
     
     if (self)    {
         [self setTotalPoints:0];
+        self.tank = [[Tank alloc] initNewTank];
+        self.playerNum = playerN;
     }
     
     return self;

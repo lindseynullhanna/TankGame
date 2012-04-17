@@ -11,15 +11,17 @@
 #import "Target.h"
 
 @interface Game : NSObject{
-    //NSInteger level;
-    NSInteger numPlayers;
-    NSMutableArray* players;
-    Player *currentPlayer;
-    Player *nextPlayer;
-    Target *target;
+
 }
 
--(id)initSinglePlayerGame;
+@property NSInteger numPlayers;
+@property NSMutableArray *players;
+@property Player *currentPlayer;
+@property Player *nextPlayer;
+@property Target *target;
+
+
+
 -(id)initTwoPlayerGame;
 
 -(NSMutableArray*) createPlayers;

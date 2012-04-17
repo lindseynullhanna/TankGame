@@ -10,11 +10,22 @@
 
 //@synthesize myTurn;
 
-@implementation Tank
-{
-    
-    
 
+@implementation Tank
+
+@synthesize myTankView;
+@synthesize myTurret;
+
+-(id) initNewTank{
+    self = [super init];
+    
+    if(self) {
+        self.myTurret = [[Turret alloc] initNewTurret];
+        
+        
+    }
+    return self;
+    
 }
 
 @end

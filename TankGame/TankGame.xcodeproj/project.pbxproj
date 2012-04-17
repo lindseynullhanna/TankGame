@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C18FDA81535FEF800E0F1DE /* SinglePlayer_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C18FDA61535FEF800E0F1DE /* SinglePlayer_UIViewController.m */; };
-		4C18FDA91535FEF800E0F1DE /* SinglePlayer_UIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C18FDA71535FEF800E0F1DE /* SinglePlayer_UIViewController.xib */; };
-		4C18FDAE1535FF1900E0F1DE /* TwoPlayer_UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C18FDAC1535FF1800E0F1DE /* TwoPlayer_UIViewController.m */; };
-		4C18FDAF1535FF1900E0F1DE /* TwoPlayer_UIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C18FDAD1535FF1900E0F1DE /* TwoPlayer_UIViewController.xib */; };
+		4C1ACBCE153CB846004D8D9B /* TankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBCD153CB846004D8D9B /* TankView.m */; };
+		4C1ACBD2153CB86E004D8D9B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBD0153CB86E004D8D9B /* GameViewController.m */; };
+		4C1ACBD6153DD425004D8D9B /* Turret.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBD5153DD425004D8D9B /* Turret.m */; };
+		4C1ACBD9153DD431004D8D9B /* Shell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBD8153DD431004D8D9B /* Shell.m */; };
+		4C1ACBDC153DD43F004D8D9B /* TurretView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBDB153DD43F004D8D9B /* TurretView.m */; };
+		4C1ACBDF153DD44A004D8D9B /* ShellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBDE153DD44A004D8D9B /* ShellView.m */; };
 		4C970CA31534CDD800B4D4B2 /* Tank.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CA21534CDD800B4D4B2 /* Tank.m */; };
 		4C970CAE1534D97C00B4D4B2 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CAD1534D97C00B4D4B2 /* Game.m */; };
 		4C970CB11534DC2D00B4D4B2 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CB01534DC2D00B4D4B2 /* Player.m */; };
@@ -27,12 +29,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C18FDA51535FEF800E0F1DE /* SinglePlayer_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePlayer_UIViewController.h; sourceTree = "<group>"; };
-		4C18FDA61535FEF800E0F1DE /* SinglePlayer_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePlayer_UIViewController.m; sourceTree = "<group>"; };
-		4C18FDA71535FEF800E0F1DE /* SinglePlayer_UIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SinglePlayer_UIViewController.xib; sourceTree = "<group>"; };
-		4C18FDAB1535FF1800E0F1DE /* TwoPlayer_UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoPlayer_UIViewController.h; sourceTree = "<group>"; };
-		4C18FDAC1535FF1800E0F1DE /* TwoPlayer_UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoPlayer_UIViewController.m; sourceTree = "<group>"; };
-		4C18FDAD1535FF1900E0F1DE /* TwoPlayer_UIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoPlayer_UIViewController.xib; sourceTree = "<group>"; };
+		4C1ACBCC153CB846004D8D9B /* TankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankView.h; sourceTree = "<group>"; };
+		4C1ACBCD153CB846004D8D9B /* TankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankView.m; sourceTree = "<group>"; };
+		4C1ACBCF153CB86E004D8D9B /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		4C1ACBD0153CB86E004D8D9B /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		4C1ACBD4153DD425004D8D9B /* Turret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turret.h; sourceTree = "<group>"; };
+		4C1ACBD5153DD425004D8D9B /* Turret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turret.m; sourceTree = "<group>"; };
+		4C1ACBD7153DD431004D8D9B /* Shell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shell.h; sourceTree = "<group>"; };
+		4C1ACBD8153DD431004D8D9B /* Shell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shell.m; sourceTree = "<group>"; };
+		4C1ACBDA153DD43F004D8D9B /* TurretView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurretView.h; sourceTree = "<group>"; };
+		4C1ACBDB153DD43F004D8D9B /* TurretView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurretView.m; sourceTree = "<group>"; };
+		4C1ACBDD153DD449004D8D9B /* ShellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellView.h; sourceTree = "<group>"; };
+		4C1ACBDE153DD44A004D8D9B /* ShellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellView.m; sourceTree = "<group>"; };
 		4C970CA11534CDD800B4D4B2 /* Tank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tank.h; sourceTree = "<group>"; };
 		4C970CA21534CDD800B4D4B2 /* Tank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tank.m; sourceTree = "<group>"; };
 		4C970CAC1534D97C00B4D4B2 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
@@ -104,26 +112,32 @@
 			children = (
 				4CC09AF115334A3D00487E2A /* _94AppDelegate.h */,
 				4CC09AF215334A3D00487E2A /* _94AppDelegate.m */,
-				4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */,
-				4C18FDA51535FEF800E0F1DE /* SinglePlayer_UIViewController.h */,
-				4C18FDAB1535FF1800E0F1DE /* TwoPlayer_UIViewController.h */,
-				4C18FDAC1535FF1800E0F1DE /* TwoPlayer_UIViewController.m */,
-				4C18FDAD1535FF1900E0F1DE /* TwoPlayer_UIViewController.xib */,
-				4C18FDA61535FEF800E0F1DE /* SinglePlayer_UIViewController.m */,
-				4C18FDA71535FEF800E0F1DE /* SinglePlayer_UIViewController.xib */,
-				4C970CAC1534D97C00B4D4B2 /* Game.h */,
-				4C970CB81534EF1000B4D4B2 /* TargetView.h */,
-				4C970CB91534EF1000B4D4B2 /* TargetView.m */,
-				4C970CB51534EBD000B4D4B2 /* Target.h */,
-				4C970CB61534EBD000B4D4B2 /* Target.m */,
-				4C970CAF1534DC2D00B4D4B2 /* Player.h */,
-				4C970CB01534DC2D00B4D4B2 /* Player.m */,
-				4C970CAD1534D97C00B4D4B2 /* Game.m */,
 				4CC09AF715334A3D00487E2A /* _94ViewController.h */,
 				4CC09AF815334A3D00487E2A /* _94ViewController.m */,
+				4C970CAC1534D97C00B4D4B2 /* Game.h */,
+				4C970CAD1534D97C00B4D4B2 /* Game.m */,
+				4C1ACBCF153CB86E004D8D9B /* GameViewController.h */,
+				4C1ACBD0153CB86E004D8D9B /* GameViewController.m */,
+				4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */,
+				4C970CAF1534DC2D00B4D4B2 /* Player.h */,
+				4C970CB01534DC2D00B4D4B2 /* Player.m */,
+				4C1ACBD7153DD431004D8D9B /* Shell.h */,
+				4C1ACBD8153DD431004D8D9B /* Shell.m */,
+				4C1ACBDD153DD449004D8D9B /* ShellView.h */,
+				4C1ACBDE153DD44A004D8D9B /* ShellView.m */,
 				4CC09AE915334A3D00487E2A /* Supporting Files */,
 				4C970CA11534CDD800B4D4B2 /* Tank.h */,
 				4C970CA21534CDD800B4D4B2 /* Tank.m */,
+				4C1ACBCC153CB846004D8D9B /* TankView.h */,
+				4C1ACBCD153CB846004D8D9B /* TankView.m */,
+				4C970CB51534EBD000B4D4B2 /* Target.h */,
+				4C970CB61534EBD000B4D4B2 /* Target.m */,
+				4C970CB81534EF1000B4D4B2 /* TargetView.h */,
+				4C970CB91534EF1000B4D4B2 /* TargetView.m */,
+				4C1ACBD4153DD425004D8D9B /* Turret.h */,
+				4C1ACBD5153DD425004D8D9B /* Turret.m */,
+				4C1ACBDA153DD43F004D8D9B /* TurretView.h */,
+				4C1ACBDB153DD43F004D8D9B /* TurretView.m */,
 			);
 			path = TankGame;
 			sourceTree = "<group>";
@@ -191,8 +205,6 @@
 			files = (
 				4CC09AED15334A3D00487E2A /* InfoPlist.strings in Resources */,
 				4CC09AF615334A3D00487E2A /* MainStoryboard.storyboard in Resources */,
-				4C18FDA91535FEF800E0F1DE /* SinglePlayer_UIViewController.xib in Resources */,
-				4C18FDAF1535FF1900E0F1DE /* TwoPlayer_UIViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +223,12 @@
 				4C970CB11534DC2D00B4D4B2 /* Player.m in Sources */,
 				4C970CB71534EBD000B4D4B2 /* Target.m in Sources */,
 				4C970CBA1534EF1000B4D4B2 /* TargetView.m in Sources */,
-				4C18FDA81535FEF800E0F1DE /* SinglePlayer_UIViewController.m in Sources */,
-				4C18FDAE1535FF1900E0F1DE /* TwoPlayer_UIViewController.m in Sources */,
+				4C1ACBCE153CB846004D8D9B /* TankView.m in Sources */,
+				4C1ACBD2153CB86E004D8D9B /* GameViewController.m in Sources */,
+				4C1ACBD6153DD425004D8D9B /* Turret.m in Sources */,
+				4C1ACBD9153DD431004D8D9B /* Shell.m in Sources */,
+				4C1ACBDC153DD43F004D8D9B /* TurretView.m in Sources */,
+				4C1ACBDF153DD44A004D8D9B /* ShellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,14 +1,19 @@
 //
-//  SinglePlayer_UIViewController.m
+//  GameViewController.m
 //  TankGame
 //
-//  Created by default on 4/11/12.
+//  Created by default on 4/16/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "SinglePlayer_UIViewController.h"
+#import "GameViewController.h"
 
-@implementation SinglePlayer_UIViewController
+@implementation GameViewController
+@synthesize currentGame;
+@synthesize players;
+@synthesize currentTarget;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +37,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    currentGame = [[Game alloc] initTwoPlayerGame];
+    
+    
+    
 }
 
 - (void)viewDidUnload
@@ -47,5 +55,7 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
 
 @end
