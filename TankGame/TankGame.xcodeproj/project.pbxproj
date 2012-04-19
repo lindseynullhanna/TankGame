@@ -26,6 +26,7 @@
 		4CC09AF315334A3D00487E2A /* _94AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC09AF215334A3D00487E2A /* _94AppDelegate.m */; };
 		4CC09AF615334A3D00487E2A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */; };
 		4CC09AF915334A3D00487E2A /* _94ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC09AF815334A3D00487E2A /* _94ViewController.m */; };
+		4CC1B4D9153F991600E80508 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1B4D8153F991600E80508 /* GameView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		4CC09AF515334A3D00487E2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4CC09AF715334A3D00487E2A /* _94ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _94ViewController.h; sourceTree = "<group>"; };
 		4CC09AF815334A3D00487E2A /* _94ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _94ViewController.m; sourceTree = "<group>"; };
+		4CC1B4D7153F991600E80508 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameView.h; path = ../GameView.h; sourceTree = "<group>"; };
+		4CC1B4D8153F991600E80508 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameView.m; path = ../GameView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				4CC09AF815334A3D00487E2A /* _94ViewController.m */,
 				4C970CAC1534D97C00B4D4B2 /* Game.h */,
 				4C970CAD1534D97C00B4D4B2 /* Game.m */,
+				4CC1B4D7153F991600E80508 /* GameView.h */,
+				4CC1B4D8153F991600E80508 /* GameView.m */,
 				4C1ACBCF153CB86E004D8D9B /* GameViewController.h */,
 				4C1ACBD0153CB86E004D8D9B /* GameViewController.m */,
 				4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */,
@@ -229,6 +234,7 @@
 				4C1ACBD9153DD431004D8D9B /* Shell.m in Sources */,
 				4C1ACBDC153DD43F004D8D9B /* TurretView.m in Sources */,
 				4C1ACBDF153DD44A004D8D9B /* ShellView.m in Sources */,
+				4CC1B4D9153F991600E80508 /* GameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

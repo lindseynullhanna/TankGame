@@ -15,10 +15,7 @@
 }
 
 @property NSInteger numPlayers;
-@property NSMutableArray *players;
-@property Player *currentPlayer;
-@property Player *nextPlayer;
-@property Target *target;
+@property (nonatomic, strong) NSMutableArray *players;
 
 
 

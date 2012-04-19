@@ -10,9 +10,14 @@
 
 @implementation GameViewController
 @synthesize currentGame;
+@synthesize currentGameView;
 @synthesize players;
-@synthesize currentTarget;
-@synthesize tank;
+@synthesize currentPlayer;
+@synthesize playerOneTankView;
+@synthesize turretOneView;
+@synthesize playerTwoTankView;
+@synthesize turretTwoView;
+@synthesize currentTargetView;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,9 +46,11 @@
     [super viewDidLoad];
     currentGame = [[Game alloc] initTwoPlayerGame];
     
-    CGRect frame = CGRectMake(0., 0., 10, 100);
-    TankView *tankView = [[TankView alloc] initWithFrame:frame];
-    [self.view addSubview:tankView];
+    [self.players addObject:currentGame.players];
+    self.currentPlayer = [self.players objectAtIndex:0];
+    
+    
+
     
     
     
@@ -51,6 +58,12 @@
 
 - (void)viewDidUnload
 {
+    [self setCurrentGameView:nil];
+    [self setPlayerOneTankView:nil];
+    [self setCurrentTargetView:nil];
+    [self setPlayerTwoTankView:nil];
+    [self setTurretTwoView:nil];
+    [self setTurretOneView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -10,13 +10,24 @@
 #import "Player.h"
 #import "Target.h"
 #import "Game.h"
+#import "GameView.h"
+#import "TargetView.h"
+#import "TurretView.h"
+#import "TankView.h"
+
 
 @interface GameViewController : UIViewController
 @property(nonatomic, strong) Game *currentGame;
+@property(weak, nonatomic) GameView *currentGameView;
 @property(nonatomic, strong) NSMutableArray *players;
-@property(nonatomic, strong) Target *currentTarget;
+@property(nonatomic, strong) Player *currentPlayer;
 
-@property(nonatomic, strong) IBOutlet TankView *tank;
 
+@property (weak, nonatomic) IBOutlet TankView *playerOneTankView;
+@property (weak, nonatomic) IBOutlet TurretView *turretOneView;
+@property (weak, nonatomic) IBOutlet TankView *playerTwoTankView;
+@property (weak, nonatomic) IBOutlet TurretView *turretTwoView;
+
+@property (weak, nonatomic) IBOutlet TargetView *currentTargetView;
 
 @end

@@ -11,6 +11,7 @@
 
 @implementation Game
 @synthesize numPlayers;
+@synthesize players;
 
 -(id)initTwoPlayerGame{
     self = [super init];
@@ -19,8 +20,6 @@
         //self->level = 1;
         self->numPlayers = 2;
         self.players = [self createPlayers];
-        self.currentPlayer = [self.players objectAtIndex:0];
-        self.nextPlayer = [self.players objectAtIndex:1];
     }
     
     return self;
