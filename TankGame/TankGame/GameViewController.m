@@ -41,15 +41,20 @@
 
 - (void)viewDidLoad
 {
-    
-    NSLog(@"VIEW DID LOAD!");
     [super viewDidLoad];
     currentGame = [[Game alloc] initTwoPlayerGame];
     
     [self.players addObject:currentGame.players];
-    self.currentPlayer = [self.players objectAtIndex:0];
+    [self setCurrentPlayer: [self.players objectAtIndex:0]];
+    
+    [currentGameView addSubview:playerOneTankView];
+    [currentGameView addSubview:turretOneView];
+    [currentGameView addSubview:playerTwoTankView];
+    [currentGameView addSubview:turretTwoView];    
+    [currentGameView addSubview:currentTargetView];
     
     
+    [self.view addSubview:currentGameView];
 
     
     

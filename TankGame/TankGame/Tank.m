@@ -21,7 +21,7 @@
     
     if(self) {
         self.myTurret = [[Turret alloc] initNewTurret];
-        CGRect frame = CGRectMake(10., 10., 20, 20);
+        //CGRect frame = CGRectMake(10., 10., 20, 20);
         //self.myTankView = [[TankView alloc] initWithFrame:frame];
         
     }
