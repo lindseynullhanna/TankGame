@@ -10,8 +10,10 @@
 #import "Game.h"
 
 @interface _94ViewController : UIViewController
-- (IBAction)Single:(id)sender;
-- (IBAction)Double:(id)sender;
+- (IBAction)startPvPGame:(id)sender;
+- (IBAction)startPvCGame:(id)sender;
+
+
 @property(weak, nonatomic) IBOutlet Game *game;
 
 

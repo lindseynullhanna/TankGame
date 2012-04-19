@@ -59,12 +59,15 @@
 }
 
 
-- (IBAction)Single:(id)sender {
-    //self.game = [game initSinglePlayerGame];
+- (IBAction)PVPGames:(id)sender {
+}
+- (IBAction)startPvPGame:(id)sender {
+    
+    //self.game = [[Game alloc] initTwoPlayerGame];
+    NSLog(@"PvP");
 }
 
-- (IBAction)Double:(id)sender {
-    self.game = [game initTwoPlayerGame];
+- (IBAction)startPvCGame:(id)sender {
+    NSLog(@"PvC");
 }
-
 @end
