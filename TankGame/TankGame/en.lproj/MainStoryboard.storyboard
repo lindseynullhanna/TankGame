@@ -29,8 +29,8 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="Double:" destination="2" eventType="touchUpInside" id="tZU-vJ-vl0"/>
-                                            <segue destination="iVK-Yo-0Q5" kind="push" id="GMd-gd-TLN"/>
+                                            <action selector="Double:" destination="2" eventType="touchUpInside" id="Yip-kD-21j"/>
+                                            <segue destination="iVK-Yo-0Q5" kind="push" id="cOu-U7-VdQ"/>
                                         </connections>
                                     </button>
                                 </subviews>

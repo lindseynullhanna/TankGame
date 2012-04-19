@@ -58,6 +58,7 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+
 - (IBAction)Single:(id)sender {
     //self.game = [game initSinglePlayerGame];
 }
@@ -65,4 +66,5 @@
 - (IBAction)Double:(id)sender {
     self.game = [game initTwoPlayerGame];
 }
+
 @end
