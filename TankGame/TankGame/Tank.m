@@ -14,7 +14,6 @@
 @implementation Tank
 
 @synthesize myTurret;
-@synthesize myTankView;
 
 -(id) initNewTank{
     self = [super init];
