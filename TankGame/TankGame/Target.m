@@ -10,14 +10,17 @@
 
 @implementation Target
 
+@synthesize speed;
+@synthesize startLocation;
+@synthesize hitPoints;
 
 -(id) initTargetwithLocation:(NSInteger)l speed:(NSInteger)s hitPoints:(NSInteger)hp{
     self = [super init];
     
     if(self) {
-        self->startLocation = l;
-        self->speed = s;
-        self->hitPoints = hp;
+        self.startLocation = l;
+        self.speed = s;
+        self.hitPoints = hp;
         
     }
     return self;

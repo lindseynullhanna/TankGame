@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface Target : NSObject{
-    NSInteger speed;
-    NSInteger startLocation;
-    NSInteger hitPoints;
+
 }
+
+@property NSInteger speed;
+@property NSInteger startLocation;
+@property NSInteger hitPoints;
+
 
 -(id) initTargetwithLocation: (NSInteger) l speed: (NSInteger) s hitPoints: (NSInteger) hp;
 

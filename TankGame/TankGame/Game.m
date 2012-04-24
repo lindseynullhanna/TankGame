@@ -14,11 +14,11 @@
 @synthesize players;
 
 -(id)initTwoPlayerGame{
+    //NSLog(@"int 2player game");
     self = [super init];
     
     if(self){
-        //self->level = 1;
-        self->numPlayers = 2;
+        self.numPlayers = 2;
         self.players = [self createPlayers];
     }
     

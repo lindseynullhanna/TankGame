@@ -56,9 +56,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tank" id="tAb-if-c2P"/>
-                    <connections>
-                        <outlet property="startPVPGame" destination="4Du-io-iJl" id="u5O-se-zhT"/>
-                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="580" y="-350"/>
@@ -70,47 +67,9 @@
                     <view key="view" contentMode="scaleToFill" id="8lE-d1-jvf" customClass="GameView">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="jx6-BZ-oUd" customClass="TankView">
-                                <rect key="frame" x="75" y="193" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" id="jrA-ym-yzy" customClass="TargetView">
-                                        <rect key="frame" x="15" y="20" width="35" height="10"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.090924573910000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="ky7-NV-A4U" customClass="TankView">
-                                <rect key="frame" x="20" y="50" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" id="VHK-d1-Qo8" customClass="TurretView">
-                                        <rect key="frame" x="15" y="20" width="35" height="10"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="i0S-gp-MAL" customClass="TargetView">
-                                <rect key="frame" x="270" y="20" width="10" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.58415622190000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tank" id="kx7-nt-Kvz"/>
-                    <connections>
-                        <outlet property="currentTarget" destination="i0S-gp-MAL" id="Sry-j8-ToW"/>
-                        <outlet property="playerOne" destination="jx6-BZ-oUd" id="7OP-Dj-Y09"/>
-                        <outlet property="playerTwo" destination="ky7-NV-A4U" id="cDO-Wn-fRi"/>
-                        <outlet property="turretOne" destination="jrA-ym-yzy" id="WhS-Lu-Hit"/>
-                        <outlet property="turretTwo" destination="VHK-d1-Qo8" id="Ukz-GG-KOf"/>
-                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1074" y="-350"/>
@@ -126,19 +85,21 @@
                             <view contentMode="scaleToFill" id="1WR-tz-Qeu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="zsB-vK-8cO" customClass="TankView">
-                                <rect key="frame" x="10" y="10" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="bVB-7L-JF3" customClass="TargetView">
-                                        <rect key="frame" x="15" y="20" width="35" height="10"/>
+                                    <view contentMode="scaleToFill" id="zsB-vK-8cO" customClass="TankView">
+                                        <rect key="frame" x="80" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="bVB-7L-JF3" customClass="TargetView">
+                                                <rect key="frame" x="15" y="20" width="35" height="10"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.090924573910000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.090924573910000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -166,41 +127,6 @@
             <point key="canvasLocation" x="54" y="-350"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="Game" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Game.h"/>
-        </class>
-        <class className="GameView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameView.h"/>
-        </class>
-        <class className="GameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="currentTargetView" candidateClass="TargetView"/>
-                <relationship kind="outlet" name="playerOneTankView" candidateClass="TankView"/>
-                <relationship kind="outlet" name="playerTwoTankView" candidateClass="TankView"/>
-                <relationship kind="outlet" name="turretOneView" candidateClass="TurretView"/>
-                <relationship kind="outlet" name="turretTwoView" candidateClass="TurretView"/>
-            </relationships>
-        </class>
-        <class className="TankView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TankView.h"/>
-        </class>
-        <class className="TargetView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TargetView.h"/>
-        </class>
-        <class className="TurretView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TurretView.h"/>
-        </class>
-        <class className="_94ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/_94ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="startPvCGame:"/>
-                <relationship kind="action" name="startPvPGame:"/>
-                <relationship kind="outlet" name="game" candidateClass="Game"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

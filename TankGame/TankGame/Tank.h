@@ -12,7 +12,7 @@
 
 @interface Tank : NSObject
 @property(nonatomic, strong) Turret *myTurret;
-//@property(nonatomic, strong) TankView *myTankView;
+
 
 -(id) initNewTank;
 

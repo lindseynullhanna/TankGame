@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad
 {
+    //NSLog(@"94 view did load");
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -63,11 +64,11 @@
 }
 - (IBAction)startPvPGame:(id)sender {
     
-    //self.game = [[Game alloc] initTwoPlayerGame];
-    NSLog(@"PvP");
+    self.game = [[Game alloc] initTwoPlayerGame];
+    //NSLog(@"PvP");
 }
 
 - (IBAction)startPvCGame:(id)sender {
-    NSLog(@"PvC");
+    //NSLog(@"PvC");
 }
 @end

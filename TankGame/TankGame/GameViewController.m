@@ -7,8 +7,10 @@
 //
 
 #import "GameViewController.h"
+#import "TankView.h"
 
 @implementation GameViewController
+
 @synthesize currentGame;
 @synthesize currentGameView;
 @synthesize players;
@@ -41,11 +43,28 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"GVC view did load");
     [super viewDidLoad];
     currentGame = [[Game alloc] initTwoPlayerGame];
     
     [self.players addObject:currentGame.players];
     [self setCurrentPlayer: [self.players objectAtIndex:0]];
+    
+    CGRect frame = CGRectMake(0., 64., 320., 416.);
+    [self setCurrentGameView:[[GameView alloc] initWithFrame:frame]];
+    
+    frame = CGRectMake(100., 183., 50., 50.);
+    playerOneTankView = [[TankView alloc] initWithFrame: frame];
+    playerOneTankView.backgroundColor = [UIColor blueColor];
+    
+    
+    
+
+    frame = CGRectMake(100., 183., 50., 50.);
+    playerTwoTankView = [[TankView alloc] initWithFrame: frame];
+    playerOneTankView.backgroundColor = [UIColor orangeColor];
+    
+    
     
     [currentGameView addSubview:playerOneTankView];
     [currentGameView addSubview:turretOneView];
@@ -63,15 +82,10 @@
 
 - (void)viewDidUnload
 {
-    [self setCurrentGameView:nil];
-    [self setPlayerOneTankView:nil];
-    [self setCurrentTargetView:nil];
-    [self setPlayerTwoTankView:nil];
-    [self setTurretTwoView:nil];
-    [self setTurretOneView:nil];
-    [super viewDidUnload];
+    //NSLog(@"GVC view did UNload");
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
