@@ -11,6 +11,7 @@
 @implementation _94AppDelegate
 
 @synthesize window = _window;
+@synthesize useAI;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

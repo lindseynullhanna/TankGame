@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Player.h"
-#import "Target.h"
+
 
 @interface Game : NSObject{
 
@@ -21,7 +20,7 @@
 
 -(id)initTwoPlayerGame;
 
--(NSMutableArray*) createPlayers;
+//-(NSMutableArray*) createPlayers;
 
 
 @end

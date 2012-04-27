@@ -8,19 +8,21 @@
 
 #import "GameViewController.h"
 #import "TankView.h"
+#import "_94AppDelegate.h"
 
-@implementation GameViewController
-
-@synthesize currentGame;
-@synthesize currentGameView;
-@synthesize players;
-@synthesize currentPlayer;
-@synthesize playerOneTankView;
-@synthesize turretOneView;
-@synthesize playerTwoTankView;
-@synthesize turretTwoView;
-@synthesize currentTargetView;
-
+@implementation GameViewController{
+    TankView *playerOne;
+    TankView *playerTwo;
+    TurretView *turretOne;
+    TurretView *turretTwo;
+    TargetView *target;
+    
+    BOOL isPvP;
+    UILabel *playerOnePoints;
+    UILabel *playerTwoPoints;
+    
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,43 +43,46 @@
 
 #pragma mark - View lifecycle
 
+-(void) doLayout {
+    
+    //isPvP = ((_94AppDelegate*) [[UIApplication sharedApplication] delegate]).useAI;
+    
+    
+    target = [[TargetView alloc] initWithFrame:CGRectMake(250., 10., 10., 50.)];
+    
+    playerOne = [[TankView alloc] initWithFrame:CGRectMake(100., 183., 50., 50.) playerNumber: 1];
+    playerTwo = [[TankView alloc] initWithFrame:CGRectMake(20., 20., 50., 50.) playerNumber:2];
+    
+    turretOne = [[TurretView alloc] initWithFrame:CGRectMake(120., 203., 30., 10.)];
+    turretTwo = [[TurretView alloc] initWithFrame:CGRectMake(40., 40., 30., 10.)];
+    
+    playerOnePoints = [[UILabel alloc] initWithFrame:CGRectMake(10., 390., 40., 20.)];
+    playerTwoPoints = [[UILabel alloc] initWithFrame:CGRectMake(270., 390., 40., 20.)];
+    
+    playerOnePoints.text = [NSString stringWithFormat: @"%d", [playerOne getPoints]];
+    playerTwoPoints.text = [NSString stringWithFormat: @"%d", [playerTwo getPoints]];
+    playerTwoPoints.textAlignment = UITextAlignmentLeft;
+    playerTwoPoints.textAlignment = UITextAlignmentRight;
+    
+    
+    
+    [self.view addSubview:target];
+    
+    [self.view addSubview:playerOne];
+    [self.view addSubview:playerTwo];
+    
+    [self.view addSubview:turretOne];
+    [self.view addSubview:turretTwo];  
+    
+    [self.view addSubview:playerOnePoints];
+    [self.view addSubview:playerTwoPoints];    
+}
 - (void)viewDidLoad
 {
-    NSLog(@"GVC view did load");
+    //NSLog(@"GVC view did load");
     [super viewDidLoad];
-    currentGame = [[Game alloc] initTwoPlayerGame];
     
-    [self.players addObject:currentGame.players];
-    [self setCurrentPlayer: [self.players objectAtIndex:0]];
-    
-    CGRect frame = CGRectMake(0., 64., 320., 416.);
-    [self setCurrentGameView:[[GameView alloc] initWithFrame:frame]];
-    
-    frame = CGRectMake(100., 183., 50., 50.);
-    playerOneTankView = [[TankView alloc] initWithFrame: frame];
-    playerOneTankView.backgroundColor = [UIColor blueColor];
-    
-    
-    
-
-    frame = CGRectMake(100., 183., 50., 50.);
-    playerTwoTankView = [[TankView alloc] initWithFrame: frame];
-    playerOneTankView.backgroundColor = [UIColor orangeColor];
-    
-    
-    
-    [currentGameView addSubview:playerOneTankView];
-    [currentGameView addSubview:turretOneView];
-    [currentGameView addSubview:playerTwoTankView];
-    [currentGameView addSubview:turretTwoView];    
-    [currentGameView addSubview:currentTargetView];
-    
-    
-    [self.view addSubview:currentGameView];
-
-    
-    
-    
+    [self doLayout];
 }
 
 - (void)viewDidUnload

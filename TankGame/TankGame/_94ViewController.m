@@ -65,6 +65,8 @@
 - (IBAction)startPvPGame:(id)sender {
     
     self.game = [[Game alloc] initTwoPlayerGame];
+    
+    
     //NSLog(@"PvP");
 }
 

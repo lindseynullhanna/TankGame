@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Tank.h"
 
 
 @interface TankView : UIView
 
+@property(nonatomic, strong) UIColor *myColor;
+@property NSInteger myPoints;
+@property BOOL myTurn;
+@property NSInteger playerNum;
 
-
+-(id) initWithFrame:(CGRect)frame playerNumber: (NSInteger) player;
+-(void) addPoints;
+-(void) addBonusPoints;
+-(NSInteger) getPoints;
 @end

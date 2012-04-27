@@ -19,21 +19,21 @@
     
     if(self){
         self.numPlayers = 2;
-        self.players = [self createPlayers];
+    //    self.players = [self createPlayers];
     }
     
     return self;
 }
 
--(NSMutableArray*) createPlayers{
+/*-(NSMutableArray*) createPlayers{
     NSMutableArray *temp = [NSMutableArray arrayWithCapacity:0];
-    Player *pl = nil;
+    TankView *pl = nil;
     for(int i = 0; i<self->numPlayers; i++){
-        pl = [[Player alloc ]initNewPlayer:i];
+        pl = [[TankView alloc ]initNewPlayer:i];
         [temp addObject:pl];
     }
     
     return temp;
 }
-
+*/
 @end

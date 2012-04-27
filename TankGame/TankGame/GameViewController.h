@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Player.h"
-#import "Target.h"
 #import "Game.h"
 #import "GameView.h"
 #import "TargetView.h"
@@ -17,10 +15,11 @@
 
 
 @interface GameViewController : UIViewController
-@property(nonatomic, strong) Game *currentGame;
+
+
+/*@property(nonatomic, strong) Game *currentGame;
 @property(weak, nonatomic) GameView *currentGameView;
 @property(nonatomic, strong) NSMutableArray *players;
-@property(nonatomic, strong) Player *currentPlayer;
 
 
 @property (weak, nonatomic) IBOutlet TankView *playerOneTankView;
@@ -29,5 +28,5 @@
 @property (weak, nonatomic) IBOutlet TurretView *turretTwoView;
 
 @property (weak, nonatomic) IBOutlet TargetView *currentTargetView;
-
+*/
 @end

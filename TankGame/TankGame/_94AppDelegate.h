@@ -10,6 +10,8 @@
 
 @interface _94AppDelegate : UIResponder <UIApplicationDelegate>
 
+
 @property (strong, nonatomic) UIWindow *window;
+@property BOOL useAI;
 
 @end

@@ -9,14 +9,9 @@
 /* Begin PBXBuildFile section */
 		4C1ACBCE153CB846004D8D9B /* TankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBCD153CB846004D8D9B /* TankView.m */; };
 		4C1ACBD2153CB86E004D8D9B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBD0153CB86E004D8D9B /* GameViewController.m */; };
-		4C1ACBD6153DD425004D8D9B /* Turret.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBD5153DD425004D8D9B /* Turret.m */; };
-		4C1ACBD9153DD431004D8D9B /* Shell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBD8153DD431004D8D9B /* Shell.m */; };
 		4C1ACBDC153DD43F004D8D9B /* TurretView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBDB153DD43F004D8D9B /* TurretView.m */; };
 		4C1ACBDF153DD44A004D8D9B /* ShellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1ACBDE153DD44A004D8D9B /* ShellView.m */; };
-		4C970CA31534CDD800B4D4B2 /* Tank.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CA21534CDD800B4D4B2 /* Tank.m */; };
 		4C970CAE1534D97C00B4D4B2 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CAD1534D97C00B4D4B2 /* Game.m */; };
-		4C970CB11534DC2D00B4D4B2 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CB01534DC2D00B4D4B2 /* Player.m */; };
-		4C970CB71534EBD000B4D4B2 /* Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CB61534EBD000B4D4B2 /* Target.m */; };
 		4C970CBA1534EF1000B4D4B2 /* TargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C970CB91534EF1000B4D4B2 /* TargetView.m */; };
 		4CC09AE315334A3D00487E2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC09AE215334A3D00487E2A /* UIKit.framework */; };
 		4CC09AE515334A3D00487E2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC09AE415334A3D00487E2A /* Foundation.framework */; };
@@ -34,22 +29,12 @@
 		4C1ACBCD153CB846004D8D9B /* TankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankView.m; sourceTree = "<group>"; };
 		4C1ACBCF153CB86E004D8D9B /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		4C1ACBD0153CB86E004D8D9B /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		4C1ACBD4153DD425004D8D9B /* Turret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turret.h; sourceTree = "<group>"; };
-		4C1ACBD5153DD425004D8D9B /* Turret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turret.m; sourceTree = "<group>"; };
-		4C1ACBD7153DD431004D8D9B /* Shell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shell.h; sourceTree = "<group>"; };
-		4C1ACBD8153DD431004D8D9B /* Shell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shell.m; sourceTree = "<group>"; };
 		4C1ACBDA153DD43F004D8D9B /* TurretView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurretView.h; sourceTree = "<group>"; };
 		4C1ACBDB153DD43F004D8D9B /* TurretView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurretView.m; sourceTree = "<group>"; };
 		4C1ACBDD153DD449004D8D9B /* ShellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellView.h; sourceTree = "<group>"; };
 		4C1ACBDE153DD44A004D8D9B /* ShellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellView.m; sourceTree = "<group>"; };
-		4C970CA11534CDD800B4D4B2 /* Tank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tank.h; sourceTree = "<group>"; };
-		4C970CA21534CDD800B4D4B2 /* Tank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tank.m; sourceTree = "<group>"; };
 		4C970CAC1534D97C00B4D4B2 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		4C970CAD1534D97C00B4D4B2 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
-		4C970CAF1534DC2D00B4D4B2 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
-		4C970CB01534DC2D00B4D4B2 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
-		4C970CB51534EBD000B4D4B2 /* Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target.h; sourceTree = "<group>"; };
-		4C970CB61534EBD000B4D4B2 /* Target.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target.m; sourceTree = "<group>"; };
 		4C970CB81534EF1000B4D4B2 /* TargetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetView.h; sourceTree = "<group>"; };
 		4C970CB91534EF1000B4D4B2 /* TargetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetView.m; sourceTree = "<group>"; };
 		4CC09ADE15334A3D00487E2A /* TankGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,23 +109,13 @@
 				4C1ACBCF153CB86E004D8D9B /* GameViewController.h */,
 				4C1ACBD0153CB86E004D8D9B /* GameViewController.m */,
 				4CC09AF415334A3D00487E2A /* MainStoryboard.storyboard */,
-				4C970CAF1534DC2D00B4D4B2 /* Player.h */,
-				4C970CB01534DC2D00B4D4B2 /* Player.m */,
-				4C1ACBD7153DD431004D8D9B /* Shell.h */,
-				4C1ACBD8153DD431004D8D9B /* Shell.m */,
 				4C1ACBDD153DD449004D8D9B /* ShellView.h */,
 				4C1ACBDE153DD44A004D8D9B /* ShellView.m */,
 				4CC09AE915334A3D00487E2A /* Supporting Files */,
-				4C970CA11534CDD800B4D4B2 /* Tank.h */,
-				4C970CA21534CDD800B4D4B2 /* Tank.m */,
 				4C1ACBCC153CB846004D8D9B /* TankView.h */,
 				4C1ACBCD153CB846004D8D9B /* TankView.m */,
-				4C970CB51534EBD000B4D4B2 /* Target.h */,
-				4C970CB61534EBD000B4D4B2 /* Target.m */,
 				4C970CB81534EF1000B4D4B2 /* TargetView.h */,
 				4C970CB91534EF1000B4D4B2 /* TargetView.m */,
-				4C1ACBD4153DD425004D8D9B /* Turret.h */,
-				4C1ACBD5153DD425004D8D9B /* Turret.m */,
 				4C1ACBDA153DD43F004D8D9B /* TurretView.h */,
 				4C1ACBDB153DD43F004D8D9B /* TurretView.m */,
 			);
@@ -223,15 +198,10 @@
 				4CC09AEF15334A3D00487E2A /* main.m in Sources */,
 				4CC09AF315334A3D00487E2A /* _94AppDelegate.m in Sources */,
 				4CC09AF915334A3D00487E2A /* _94ViewController.m in Sources */,
-				4C970CA31534CDD800B4D4B2 /* Tank.m in Sources */,
 				4C970CAE1534D97C00B4D4B2 /* Game.m in Sources */,
-				4C970CB11534DC2D00B4D4B2 /* Player.m in Sources */,
-				4C970CB71534EBD000B4D4B2 /* Target.m in Sources */,
 				4C970CBA1534EF1000B4D4B2 /* TargetView.m in Sources */,
 				4C1ACBCE153CB846004D8D9B /* TankView.m in Sources */,
 				4C1ACBD2153CB86E004D8D9B /* GameViewController.m in Sources */,
-				4C1ACBD6153DD425004D8D9B /* Turret.m in Sources */,
-				4C1ACBD9153DD431004D8D9B /* Shell.m in Sources */,
 				4C1ACBDC153DD43F004D8D9B /* TurretView.m in Sources */,
 				4C1ACBDF153DD44A004D8D9B /* ShellView.m in Sources */,
 				9076908F154078A800926A3A /* GameView.m in Sources */,

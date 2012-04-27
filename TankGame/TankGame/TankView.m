@@ -10,16 +10,28 @@
 
 @implementation TankView
 
+@synthesize myTurn, myColor, myPoints, playerNum;
 
 -(void) doLayout
 {
-    self.backgroundColor = [UIColor blueColor];
+    
 }
 
-- (id)initWithFrame:(CGRect)frame 
+- (id)initWithFrame:(CGRect)frame playerNumber: (NSInteger) player
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.myPoints = 0;
+        self.playerNum = player;
+        if (playerNum == 1){
+            self.backgroundColor = [UIColor blueColor];
+            self.myTurn = YES;
+            
+        }
+        else if (playerNum == 2) {
+            self.backgroundColor = [UIColor purpleColor];
+            self.myTurn = NO;
+        }
         [self doLayout];
     }
     return self;
@@ -34,4 +46,15 @@
 }
 */
 
+-(NSInteger) getPoints{
+    return self.myPoints;
+}
+
+-(void) addPoints {
+    self.myPoints += 10;
+}
+
+-(void) addBonusPoints {
+    self.myPoints += 15;
+}
 @end
