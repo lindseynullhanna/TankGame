@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Game.h"
+#import "TurretView.h"
+
 
 @interface _94ViewController : UIViewController
-- (IBAction)startPvPGame:(id)sender;
-- (IBAction)startPvCGame:(id)sender;
 
 
-@property(weak, nonatomic) IBOutlet Game *game;
+-(void) doLayout;
+-(void) setGameType;
+-(void) setPVP:(id)sender;
+-(void) setPVC:(id)sender;
+-(void) shootShellsFromTurret: (TurretView*) theTurret;
 
 
 @end
