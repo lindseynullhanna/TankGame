@@ -10,7 +10,8 @@
 
 
 @interface ShellView : UIView
+@property CGFloat shellAngle;
 
--(void) moveShellAtAngle: (float) angle;
-//@property(nonatomic, strong) Shell *myShell;
+- (id)initWithFrame:(CGRect)frame angle: (CGFloat) currentAngle;
+-(void) moveShell;
 @end

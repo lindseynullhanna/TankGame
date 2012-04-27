@@ -164,8 +164,11 @@
     
 -(IBAction) shootShellsFromTurret: (id)sender {
     if (playerOne.myTurn == YES){  
-        ShellView *newShell = [[ShellView alloc] initWithFrame:CGRectMake(turretOne.frame.origin.x + turretOne.frame.size.width, turretOne.frame.origin.y, 10, 10)];   
-        [newShell moveShellAtAngle:turretOne.currentAngle];  
+  
+        ShellView *newShell = [[ShellView alloc] initWithFrame:CGRectMake(turretOne.frame.origin.x + turretOne.frame.size.width, turretOne.frame.origin.y, 10., 10.) angle:turretOne.currentAngle];
+        
+        [newShell moveShell]; 
+        
         [self.view addSubview:newShell];
     }
 }

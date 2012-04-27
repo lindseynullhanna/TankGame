@@ -9,31 +9,32 @@
 #import "ShellView.h"
 
 @implementation ShellView
-//@synthesize myShell;
+@synthesize shellAngle;
 
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame angle: (CGFloat) currentAngle
 {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
-        //[self performSelector:@selector(moveShell:theta:) withObject:self afterDelay:.1];   
+        self.shellAngle = currentAngle;
     }
     return self;
 }
 
--(void) moveShellAtAngle: (float) angle{
+-(void) moveShell{
                                         
     
-    float x = cos(angle) * 10;
-    float y = sin(angle) * 10;
+    CGFloat x = cos(self.shellAngle) * 10;
+    CGFloat y = sin(self.shellAngle) * 10;
     
-    NSLog(@"%f", y );
+    //NSLog(@"%f", self.shellAngle );
     
     self.center = CGPointMake(self.center.x + x, self.center.y + y);
+
     //self.transform = CGAffineTransformMakeTranslation(x, y);
-    
-    [self performSelector:@selector(moveShellAtAngle:) withObject:self afterDelay:.1];
+
+    [self performSelector:@selector(moveShell:) withObject:nil afterDelay:.1];
     
 }
 
