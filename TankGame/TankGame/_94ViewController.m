@@ -10,6 +10,7 @@
 #import "TankView.h"
 #import "TargetView.h"
 #import "TurretView.h"
+#import "ShellView.h"
 
 @implementation _94ViewController{
     TankView *playerOne;
@@ -24,6 +25,8 @@
     
     UIButton *pvpButton;
     UIButton *pvcButton;
+    
+    NSTimer *timer;
 }
 
 
@@ -66,8 +69,12 @@
    // [pvcButton dealloc];
     
     [self doLayout];
+    NSLog(@"rawr");
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(shootShellsFromTurret:) userInfo:nil repeats:YES];
     
 }
+
+
 
 -(IBAction) setPVC:(id)sender{
     isPvP = NO;
@@ -135,6 +142,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -152,9 +161,13 @@
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
-
--(void) shootShellsFromTurret: (TurretView*) theTurret{
-    //theTurret.
+    
+-(IBAction) shootShellsFromTurret: (id)sender {
+    if (playerOne.myTurn == YES){  
+        ShellView *newShell = [[ShellView alloc] initWithFrame:CGRectMake(turretOne.frame.origin.x + turretOne.frame.size.width, turretOne.frame.origin.y, 10, 10)];   
+        [newShell moveShellAtAngle:turretOne.currentAngle];  
+        [self.view addSubview:newShell];
+    }
 }
 
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -167,6 +180,7 @@
         x = turretOne.frame.origin.x - currentPoint.x;
             
         turretOne.transform = CGAffineTransformMakeRotation(atan2(y,x));
+        turretOne.currentAngle = atan2(y, x);
     }
     else if (playerTwo.myTurn == YES && isPvP == YES){
         y = turretTwo.frame.origin.y - currentPoint.y;

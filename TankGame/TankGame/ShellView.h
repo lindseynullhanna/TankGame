@@ -11,6 +11,6 @@
 
 @interface ShellView : UIView
 
-
+-(void) moveShellAtAngle: (float) angle;
 //@property(nonatomic, strong) Shell *myShell;
 @end

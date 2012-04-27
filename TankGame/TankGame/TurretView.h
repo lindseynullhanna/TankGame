@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TurretView : UIView
-
+@property float currentAngle;
 @end

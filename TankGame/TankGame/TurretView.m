@@ -9,7 +9,7 @@
 #import "TurretView.h"
 
 @implementation TurretView
-
+@synthesize currentAngle;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
