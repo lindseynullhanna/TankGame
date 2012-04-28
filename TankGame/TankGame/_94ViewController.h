@@ -18,6 +18,10 @@
 -(void) setPVP:(id)sender;
 -(void) setPVC:(id)sender;
 -(void) shootShellsFromTurret: (TurretView*) theTurret;
+-(void) updateScore;
+-(void) updateCountdown;
+-(void) switchPlayers;
+-(void) playAITurn;
 
 
 @end

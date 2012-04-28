@@ -10,4 +10,6 @@
 
 @interface TargetView : UIView
 
+-(void) moveTargetUp;
+-(void) moveTargetDown;
 @end

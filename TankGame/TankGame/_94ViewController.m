@@ -22,11 +22,18 @@
     BOOL isPvP;
     UILabel *playerOnePoints;
     UILabel *playerTwoPoints;
+    UILabel *currentPlayer;
+    UILabel *currentTimeRemaining;
     
     UIButton *pvpButton;
     UIButton *pvcButton;
     
-    NSTimer *timer;
+    NSTimer *shellTimer;
+    NSTimer *playerTimer;
+    NSTimer *playerDisplayTimer;
+    
+    NSInteger timeRemaining;
+    NSInteger playerTime;
 }
 
 
@@ -60,53 +67,93 @@
 }
 
 -(IBAction) setPVP:(id)sender{
-    
-    NSLog(@"set PVP");
     isPvP = YES;
     [pvpButton removeFromSuperview];
     [pvcButton removeFromSuperview];
+       
+    [self doLayout]; 
+    shellTimer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(shootShellsFromTurret:) userInfo:nil repeats:YES];    self.view.backgroundColor = [UIColor whiteColor];    
+}
+
+-(void) switchPlayers{
+    if (playerOne.myTurn == YES) {
+        playerOne.myTurn = NO;
+        playerTwo.myTurn = YES;
+        currentPlayer.text = @"Player Two";
+        [self.view bringSubviewToFront:target];
+        currentTimeRemaining.center = CGPointMake(270., 30.);  
+        currentTimeRemaining.textAlignment = UITextAlignmentRight;
+        if (isPvP == NO)
+            [self playAITurn];    
+    }else if (playerTwo.myTurn == YES)            {
+        playerOne.myTurn = YES;
+        playerTwo.myTurn = NO;
+        currentPlayer.text = @"Player One";     
+        [self.view bringSubviewToFront:target];
+        currentTimeRemaining.center = CGPointMake(50., 30.);
+        currentTimeRemaining.textAlignment = UITextAlignmentLeft;
+    }
+    [playerDisplayTimer invalidate];
     
-   // [pvcButton dealloc];
-    
-    [self doLayout];
-    NSLog(@"rawr");
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(shootShellsFromTurret:) userInfo:nil repeats:YES];
-    
+    timeRemaining = playerTime;  
+    currentTimeRemaining.text = [NSString stringWithFormat:@"%d", timeRemaining];
+    playerDisplayTimer = [NSTimer scheduledTimerWithTimeInterval:1. target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];
 }
 
 
-
+-(void) updateCountdown{
+    timeRemaining--;    
+    if (timeRemaining > 5){
+        currentTimeRemaining.textColor = [UIColor blackColor];
+    }
+    else{
+        currentTimeRemaining.textColor = [UIColor redColor];
+    }
+    currentTimeRemaining.text = [NSString stringWithFormat:@"%d", timeRemaining];
+}
 -(IBAction) setPVC:(id)sender{
     isPvP = NO;
+    [pvpButton removeFromSuperview];
+    [pvcButton removeFromSuperview];
     
-    [self.view delete:pvcButton];
-    [self.view delete:pvpButton];
+    [self doLayout];
+    shellTimer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(shootShellsFromTurret:) userInfo:nil repeats:YES];    self.view.backgroundColor = [UIColor whiteColor];
 }
 -(void) doLayout {
     
     //isPvP = ((_94AppDelegate*) [[UIApplication sharedApplication] delegate]).useAI;
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    timeRemaining = playerTime;
+   
     
     target = [[TargetView alloc] initWithFrame:CGRectMake(250., 10., 10., 50.)];
+
+    playerOne = [[TankView alloc] initWithFrame:CGRectMake(50., 100., 50., 50.) playerNumber: 1];
+    playerTwo = [[TankView alloc] initWithFrame:CGRectMake(50., 250., 50., 50.) playerNumber:2];
     
-    playerOne = [[TankView alloc] initWithFrame:CGRectMake(100., 183., 50., 50.) playerNumber: 1];
-    playerTwo = [[TankView alloc] initWithFrame:CGRectMake(20., 20., 50., 50.) playerNumber:2];
-    
-    turretOne = [[TurretView alloc] initWithFrame:CGRectMake(120., 203., 30., 10.)];
-    turretTwo = [[TurretView alloc] initWithFrame:CGRectMake(40., 40., 30., 10.)];
+    turretOne = [[TurretView alloc] initWithFrame:CGRectMake(70., 120., 30., 10.)];
+    turretTwo = [[TurretView alloc] initWithFrame:CGRectMake(70., 270., 30., 10.)];
     
     playerOnePoints = [[UILabel alloc] initWithFrame:CGRectMake(10., 390., 40., 20.)];
     playerTwoPoints = [[UILabel alloc] initWithFrame:CGRectMake(270., 390., 40., 20.)];
+    currentPlayer   = [[UILabel alloc] initWithFrame:CGRectMake(0., 10., 320., 20.)];
+    currentTimeRemaining = [[UILabel alloc] initWithFrame:CGRectMake(10., 10., 80., 40.)];
     
     playerOnePoints.text = [NSString stringWithFormat: @"%d", [playerOne getPoints]];
     playerTwoPoints.text = [NSString stringWithFormat: @"%d", [playerTwo getPoints]];
+    currentPlayer.text = @"Player One";
+    currentTimeRemaining.text = [NSString stringWithFormat:@"%d", timeRemaining];
+    
     playerTwoPoints.textAlignment = UITextAlignmentLeft;
     playerTwoPoints.textAlignment = UITextAlignmentRight;
+    currentPlayer.textAlignment = UITextAlignmentCenter;
+    currentTimeRemaining.textAlignment = UITextAlignmentLeft;
     
+    currentTimeRemaining.font = [UIFont systemFontOfSize:40.];    
     
-    
+    [self.view addSubview:currentPlayer];    
     [self.view addSubview:target];
+    [target moveTargetDown];
     
     [self.view addSubview:playerOne];
     [self.view addSubview:playerTwo];
@@ -115,15 +162,20 @@
     [self.view addSubview:turretTwo];  
     
     [self.view addSubview:playerOnePoints];
-    [self.view addSubview:playerTwoPoints];    
+    [self.view addSubview:playerTwoPoints]; 
+    [self.view addSubview:currentTimeRemaining];
+    
+    [self updateScore];
 }
 
 - (void)viewDidLoad
 {
     //NSLog(@"94 view did load");
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
-    //[self doLayout];
+    
+    playerDisplayTimer = [NSTimer scheduledTimerWithTimeInterval:1. target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];
 }
 
 - (void)viewDidUnload
@@ -137,7 +189,8 @@
 {
     [super viewWillAppear:animated];
     [self setGameType];
-}
+    playerTime = 10;
+    playerTimer = [NSTimer scheduledTimerWithTimeInterval:(playerTime + 1) target:self selector:@selector(switchPlayers) userInfo:nil repeats:YES];}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -149,6 +202,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+    [playerTimer invalidate];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -165,12 +219,26 @@
 -(IBAction) shootShellsFromTurret: (id)sender {
     if (playerOne.myTurn == YES){  
   
-        ShellView *newShell = [[ShellView alloc] initWithFrame:CGRectMake(turretOne.frame.origin.x + turretOne.frame.size.width, turretOne.frame.origin.y, 10., 10.) angle:turretOne.currentAngle];
+        ShellView *newShell = [[ShellView alloc] initWithFrame:CGRectMake(turretOne.frame.origin.x + turretOne.frame.size.width, turretOne.frame.origin.y, 10., 10.) angle:turretOne.currentAngle myTank:playerOne currentTarget:target];
         
         [newShell moveShell]; 
         
         [self.view addSubview:newShell];
+    }else if (playerTwo.myTurn == YES/* && isPvP == YES*/){
+        
+        ShellView *newShell = [[ShellView alloc] initWithFrame:CGRectMake(turretTwo.frame.origin.x + turretTwo.frame.size.width, turretTwo.frame.origin.y, 10., 10.) angle:turretTwo.currentAngle myTank:playerTwo currentTarget:target];
+        
+        [newShell moveShell]; 
+        
+        [self.view addSubview:newShell];    
     }
+}
+
+-(void) updateScore {
+    playerOnePoints.text = [NSString stringWithFormat: @"%d", [playerOne getPoints]];
+    playerTwoPoints.text = [NSString stringWithFormat: @"%d", [playerTwo getPoints]]; 
+    
+    [self performSelector:@selector(updateScore) withObject:nil afterDelay:.05];
 }
 
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -183,13 +251,27 @@
         x = turretOne.frame.origin.x - currentPoint.x;
             
         turretOne.transform = CGAffineTransformMakeRotation(atan2(y,x));
-        turretOne.currentAngle = atan2(y, x);
+        turretOne.currentAngle = atan2(-y, -x);
     }
     else if (playerTwo.myTurn == YES && isPvP == YES){
         y = turretTwo.frame.origin.y - currentPoint.y;
         x = turretTwo.frame.origin.x - currentPoint.x;
         
-        turretTwo.transform = CGAffineTransformMakeRotation(atan2(y,x));    
+        turretTwo.transform = CGAffineTransformMakeRotation(atan2(y,x));
+        turretTwo.currentAngle = atan2(-y, -x);        
     }
 }
+
+-(void) playAITurn{
+    float x, y;
+    
+    x = turretTwo.center.x - target.center.x;
+    y = turretTwo.center.y - target.center.y;
+    
+    turretTwo.transform = CGAffineTransformMakeRotation(atan2(y, x));
+    turretTwo.currentAngle = atan2(-y,-x);
+    
+    [self performSelector:@selector(playAITurn) withObject:nil afterDelay:.1];
+}
+
 @end

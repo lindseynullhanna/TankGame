@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TargetView.h"
+#import "TankView.h"
 
 @interface ShellView : UIView
 @property CGFloat shellAngle;
+@property (nonatomic, strong) TargetView *currentTarget;
+@property(nonatomic,strong) TankView *myTank;
 
-- (id)initWithFrame:(CGRect)frame angle: (CGFloat) currentAngle;
+- (id)initWithFrame:(CGRect)frame angle: (CGFloat) currentAngle myTank: (TankView*) tank currentTarget: (TargetView*) target;
 -(void) moveShell;
+-(BOOL) noCollision;
 @end
