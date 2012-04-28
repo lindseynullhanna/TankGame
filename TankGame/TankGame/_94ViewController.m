@@ -143,7 +143,8 @@
     for (UIView *view in views){
         [view removeFromSuperview];
     }
-       
+    
+    self.navigationItem.leftBarButtonItem = nil;
 }
 -(void) doLayout {
     
