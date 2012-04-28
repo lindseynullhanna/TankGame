@@ -43,19 +43,6 @@
             <point key="canvasLocation" x="54" y="-350"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="Game" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Game.h"/>
-        </class>
-        <class className="_94ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/_94ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="startPvCGame:"/>
-                <relationship kind="action" name="startPvPGame:"/>
-                <relationship kind="outlet" name="game" candidateClass="Game"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

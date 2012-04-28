@@ -27,6 +27,7 @@
     
     UIButton *pvpButton;
     UIButton *pvcButton;
+    IBOutlet UIBarButtonItem *backButton;
     
     NSTimer *shellTimer;
     NSTimer *playerTimer;
@@ -35,7 +36,7 @@
     NSInteger timeRemaining;
     NSInteger playerTime;
 }
-
+@synthesize backButton;
 
 - (void)didReceiveMemoryWarning
 {
@@ -72,7 +73,17 @@
     [pvcButton removeFromSuperview];
        
     [self doLayout]; 
-    shellTimer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(shootShellsFromTurret:) userInfo:nil repeats:YES];    self.view.backgroundColor = [UIColor whiteColor];    
+    [self startTimers];
+}
+
+-(void) startTimers{
+     playerTimer = [NSTimer scheduledTimerWithTimeInterval:(playerTime + 1) target:self selector:@selector(switchPlayers) userInfo:nil repeats:YES];
+    
+    
+    shellTimer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(shootShellsFromTurret:) userInfo:nil repeats:YES]; 
+    
+    playerDisplayTimer = [NSTimer scheduledTimerWithTimeInterval:1. target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];    
+    
 }
 
 -(void) switchPlayers{
@@ -116,8 +127,23 @@
     [pvpButton removeFromSuperview];
     [pvcButton removeFromSuperview];
     
-    [self doLayout];
-    shellTimer = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(shootShellsFromTurret:) userInfo:nil repeats:YES];    self.view.backgroundColor = [UIColor whiteColor];
+    [self doLayout];   
+    [self startTimers];
+}
+- (IBAction)backtoMenu:(id)sender {
+    [self clearScreen];
+    [shellTimer invalidate];
+    [playerTimer invalidate];
+    [playerDisplayTimer invalidate];
+    [self setGameType];
+}
+
+-(void) clearScreen{
+    NSArray *views = [self.view subviews];
+    for (UIView *view in views){
+        [view removeFromSuperview];
+    }
+       
 }
 -(void) doLayout {
     
@@ -125,6 +151,8 @@
     
     timeRemaining = playerTime;
    
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     target = [[TargetView alloc] initWithFrame:CGRectMake(250., 10., 10., 50.)];
 
@@ -151,6 +179,8 @@
     
     currentTimeRemaining.font = [UIFont systemFontOfSize:40.];    
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Main Menu" style:UIBarButtonItemStylePlain target:self action:@selector(backtoMenu:)];
+    
     [self.view addSubview:currentPlayer];    
     [self.view addSubview:target];
     [target moveTargetDown];
@@ -175,11 +205,13 @@
     
 	// Do any additional setup after loading the view, typically from a nib.
     
-    playerDisplayTimer = [NSTimer scheduledTimerWithTimeInterval:1. target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];
 }
 
 - (void)viewDidUnload
 {
+    [self setBackButton:nil];
+    [self setBackButton:nil];
+    [self setBackButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -190,7 +222,7 @@
     [super viewWillAppear:animated];
     [self setGameType];
     playerTime = 10;
-    playerTimer = [NSTimer scheduledTimerWithTimeInterval:(playerTime + 1) target:self selector:@selector(switchPlayers) userInfo:nil repeats:YES];}
+}   
 
 - (void)viewDidAppear:(BOOL)animated
 {

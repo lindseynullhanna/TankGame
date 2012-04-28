@@ -11,6 +11,7 @@
 
 
 @interface _94ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 
 
 -(void) doLayout;
@@ -22,6 +23,8 @@
 -(void) updateCountdown;
 -(void) switchPlayers;
 -(void) playAITurn;
+-(void) clearScreen;
+-(void) startTimers;
 
 
 @end
