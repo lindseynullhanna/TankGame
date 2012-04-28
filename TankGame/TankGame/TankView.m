@@ -3,7 +3,7 @@
 //  TankGame
 //
 //  Created by default on 4/16/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Lindsey Hanna. All rights reserved.
 //
 
 #import "TankView.h"
@@ -37,8 +37,6 @@
     return self;
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
     //draw rounded rectangular tank with a different color for each player
