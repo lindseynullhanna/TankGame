@@ -21,6 +21,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        //init with zero points, and player one going first
         self.backgroundColor = [UIColor clearColor];
         self.myPoints = 0;
         self.playerNum = player;
@@ -40,6 +41,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+    //draw rounded rectangular tank with a different color for each player
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:10.];
     
     self.backgroundColor = [UIColor clearColor];
@@ -52,7 +54,6 @@
     
 }
 
-
 -(NSInteger) getPoints{
     return self.myPoints;
 }
@@ -61,7 +62,4 @@
     self.myPoints += 10;
 }
 
--(void) addBonusPoints {
-    self.myPoints += 15;
-}
 @end

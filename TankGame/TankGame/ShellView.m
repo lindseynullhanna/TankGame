@@ -26,15 +26,13 @@
 
 -(void) moveShell{
                                         
-    
+    //move shell according to turret angle
     CGFloat x = cos(self.shellAngle) * 10;
     CGFloat y = sin(self.shellAngle) * 10;
     
-    //NSLog(@"%f", self.shellAngle );
-    
     self.center = CGPointMake(self.center.x + x, self.center.y + y);
-
-    //self.transform = CGAffineTransformMakeTranslation(x, y);
+    
+    //if it hasn't collided with something, keep moving)
     if ([self noCollision]){
         [self performSelector:@selector(moveShell) withObject:nil afterDelay:.1];
     }
@@ -42,6 +40,8 @@
 }
 
 -(BOOL) noCollision{
+    
+    //check for a collision with the target or moving offscreen
     
     if (self.center.y + self.frame.size.width/2 > 320) {
         //offscreen
@@ -64,6 +64,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+    //draw circular shell with same color as player tank
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
     self.backgroundColor = [UIColor clearColor];
     if (self.myTank.playerNum == 1)

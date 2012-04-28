@@ -25,14 +25,15 @@
 
 -(void) moveTargetDown{
     
-    //NSLog(@"%f", self.shellAngle );
-    
+    //move the target down
     self.center = CGPointMake(self.center.x, self.center.y + 10);
     
-    //self.transform = CGAffineTransformMakeTranslation(x, y);
+    //if the target hasn't reached the bottom, keep moving down
     if(self.center.y + self.frame.size.height + 10. < self.superview.frame.size.height){ 
         [self performSelector:@selector(moveTargetDown) withObject:nil afterDelay:.1];
-    }else{
+    }
+    //otherwise, start moving up
+    else{
         [self performSelector:@selector(moveTargetUp) withObject:nil afterDelay:.1];
     }
     
@@ -40,24 +41,17 @@
 
 -(void) moveTargetUp{
     
-    //NSLog(@"%f", self.shellAngle );
-    
+    //move target up    
     self.center = CGPointMake(self.center.x, self.center.y - 10);
     
-    //self.transform = CGAffineTransformMakeTranslation(x, y);
+    //if the target hasn't reached the top, keep moving up
     if (self.frame.origin.y > 10.){
         [self performSelector:@selector(moveTargetUp) withObject:nil afterDelay:.1];
-    }else {
+    }
+    //otherwise, start moving down
+    else {
         [self performSelector:@selector(moveTargetDown) withObject:nil afterDelay:.1];
     }
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end
